@@ -65,14 +65,14 @@ id_dsa 和 id_dsa.pub 就是需要的文件
         git clone https://github.com/<username>/<repository>.git 
         
         # 如已经clone过了，可以用pull拿到最新版本
-        `git pull`
+        git pull
         
         # 更改之后，简单点加更改到Header（提交）
-        `git add .`  (也可以 `git add -A`)
+        git add .  (也可以 git add -A)
         # 正规点为以后便于检索，打个label 
-        `git commit <label name>`
+        git commit <label name>
         
         # 提交
-        `git push`
+        git push
         
 当然这是最最简单的git操作，参考 [GIT操作小结](http://wklken.me/posts/2013/12/01/git-base.html)
