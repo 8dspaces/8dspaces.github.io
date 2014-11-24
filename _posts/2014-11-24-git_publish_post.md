@@ -8,8 +8,9 @@ tags : [git]
 
 ## 用Git发布文章
 
-jekyll 搭建博客之后（基于github)，在本地写好文章，那么问题来了：怎么发布到github上呢？
-当然可以通过github 的界面（web/客户端）完成提交， 那么有没有更geek点的方式呢？
+jekyll 搭建博客之后（基于github)，在本地写好文章  
+那么问题来了：怎么发布到github上呢？  
+当然你可以通过github 的界面（web/客户端）完成提交， 那么有没有更geek点的方式呢？
 
  参考：[如何搭建Jekyll博客](http://www.mceiba.com/develop/jekyll-introduction.html)
 
