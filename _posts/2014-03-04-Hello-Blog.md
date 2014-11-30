@@ -2,7 +2,7 @@
 layout: post
 category : blog
 tagline: "Blog Begin"
-tags : [begin]
+tags : [blog]
 ---
 {% include JB/setup %}
 
