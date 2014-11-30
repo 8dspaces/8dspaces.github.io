@@ -21,8 +21,9 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,th,t
 /* @end */
 
 body {
-	font-family: Palatino, georgia, "times new roman", serif;
-	background-color: whitesmoke;
+	/*font-family: Palatino, georgia, "times new roman", serif;*/
+    font-family:Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+	background-color: #dfdfdf; /*whitesmoke;*/
 	background-position: center -18em;
 	background-repeat: repeat-x; 
 }
@@ -31,7 +32,7 @@ body {
 img { -ms-interpolation-mode:bicubic; }
 
 /* IE6 ignores this and uses default size of 16pt */
-html>body { font-size:16px; }
+html>body { font-size:15px; }
 p { margin: 0 0 1.5em 0; text-align: justify; }
 
 a { text-decoration: none; color: #339; }
@@ -65,26 +66,41 @@ hr {
 sup { line-height: 1ex; }
 
 #site {
-	max-width: 46em;
+	max-width: 68em;
 	margin: 1.5em auto 3em auto;
-	line-height:1.5em;
+	line-height:2em;
 }
 
-#page, #disqus_thread {
+#page-content{
+    back-ground: #fff;
+    -webkit-box-shadow: 0 0 0 4px rgba(0,0,0,0.03) inset,0 0 0 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 0 0 4px rgba(0,0,0,0.03) inset,0 0 0 1px rgba(0,0,0,0.15);
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.03) inset,0 0 0 1px rgba(0,0,0,0.15);
+    position: relative;
+}
+#page{
+    padding: 3em 3em 5em 3em;
+    margin-top: 30px;
+    background: white;
+    background-image: url(grid.png); 
+    border: 1px solid #ccc;
+}
+/*#page, #disqus_thread {*/
+#disqus_thread {
 	background: white;
-/*	background-image: url(grid.png); */
-	padding: 3em 3em 1.5em 3em;
+	background-image: url(grid.png); 
+	padding: 5em 3em 1.5em 3em;
 	border: 1px solid #ccc;
 }
 
 /* More experimental CSS3 features */
-#page, #disqus_thread {
+#disqus_thread {
 	box-shadow: 2px 2px 8px #aaa;
 	-webkit-box-shadow: 2px 2px 8px #aaa;
 	-moz-box-shadow: 2px 2px 8px #aaa;	
 }
 
-#disqus_thread { padding-top: 0; }
+#disqus_thread { margin-top: 0; }
 
 /* TODO
 #page { counter-reset: section; }
@@ -95,6 +111,12 @@ sup { line-height: 1ex; }
 	counter-increment: section 2;
 }
 */
+
+.emphnext{
+    font-size: 24px;
+    color: green;
+    font-weight:bold;
+}
 
 /* @group FancyFirst */
 .emphnext + p:first-letter, p.emphfirst:first-letter {
@@ -165,10 +187,10 @@ ul {
 	margin-top: 1.5em;
 	margin-bottom: 1.5em;
 	line-height: 1.5em;
-	padding-left: 1.5em;
+	padding-left: 2.5em;
 }
 ul li {
-	list-style-type: square;
+	list-style-type: circle;
 	list-style-position: outside;
 }
 ol li {
@@ -200,12 +222,36 @@ ul.compact li a {
 #header:hover a:hover { text-decoration: none; }
 #header a:hover .hover { color: silver; }
 #header {
+    
 	position: relative;
 	font-variant: small-caps;
 	line-height: 1em;
 	margin-top: .5em;
 	margin-bottom: 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    /*
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    padding-bottom: 3px;
+    */
 }
+/*
+#header .shadow {
+width: 100%;
+height: 5px;
+position: absolute;
+left: 0;
+bottom: -5px;
+z-index: 500;
+display: none;
+}
+#header .shadow  span {
+background: url(http://static.tumblr.com/xgwqnql/fMLlbpj9t/header_shadow.png) left top repeat-x;
+height: 5px;
+display: block;
+padding-bottom: 80px;
+}
+*/
 #header h1 {
 	font-family: Palatino, georgia, "times new roman", serif;
 	margin-bottom: 0;
@@ -337,17 +383,22 @@ p.excerpt { margin: 0; }
 /* @end */
 
 /* @group Code */
+
 pre {
-	margin: 1em 0 1.5em 0;
-	font-size: 0.75em; /* Hack to make code look same size as body font */  
+	margin: 1em 0 1.5em 0; 
+    border: 1px solid #ddc;
+	padding: 0.5em 1em;
+   }
+/*
+	font-size: 0.75em;  
+
 	line-height: 1.5em;	
 	color: #111;
 	background: #fffff0;
-	border: 1px solid #ddc;
-	padding: 0.5em 1em;
+
 	overflow: hidden;
 
-	/* Experimental CSS3 stuff */
+	
 	box-shadow: 1px 1px 6px #ccc;
 	-webkit-box-shadow: 1px 1px 6px #ccc;
 	-moz-box-shadow: 1px 1px 6px #ccc;
@@ -356,6 +407,7 @@ pre:hover {
 	border-right: none;
 	overflow: visible;
 }
+
 code {
 	font-size: 1em;
 	background-color: #f7f7ff;
@@ -364,12 +416,13 @@ code {
 pre > code {
 	background-color: transparent;
 }
+*/
 /* @end */
 
 
 /* @group Disqus */
 #disqus_thread {
-	margin-top: 2.93em;
+	margin-top: 0em;
 }
 .dsq-comment-body {
 	text-align: justify;

@@ -1,11 +1,10 @@
 ---
 layout: post
 category : blog
+title: "javascript编程风格 "
 tagline: "javascript编程风格 "
 tags : [blog, javascript]
 ---
-
-## javascript编程风格
 
 
 + 规则1：表示区块起首的大括号，不要另起一行。

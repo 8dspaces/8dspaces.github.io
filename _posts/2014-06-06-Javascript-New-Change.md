@@ -1,12 +1,11 @@
 ---
 layout: post
 category : blog
-tagline: "JavaScript new change "
+title: "javascript 新变化"
 tags : [blog, javascript]
 ---
 
-
-## javascript 新变化
+关于javascript 面向对象的一些新变化
 
 
 

@@ -1,14 +1,14 @@
 ---
 layout: post
 category : blog
-tagline: "JavaScript this "
+title: "JavaScript 中的 this "
+tagline: "JavaScript 中的 this "
 tags : [blog, javascript]
 ---
 
-## javascript this
 
 
-this是一个关键字，不是变量，也不是属性名。javascript的语法不允许给this赋值。和变量不同，关键字this没有作用于的限制，嵌套的函数不会从调用它的函数中（即上一层函数）继承this。
+`this`是一个关键字，不是变量，也不是属性名。javascript的语法不允许给this赋值。和变量不同，关键字this没有作用于的限制，嵌套的函数不会从调用它的函数中（即上一层函数）继承this。
 
 　　1、如果嵌套函数作为方法调用，其this的值指向调用它的对象；
 
@@ -20,37 +20,37 @@ this是一个关键字，不是变量，也不是属性名。javascript的语法
 
 例子1：
 
- var o={　　　　　　　　　　　　　　　　//对象o
+     var o={　　　　　　　　　　　　　　　　//对象o
 
-　　m:function(){　　　　　　　　　　　//对象中的方法m
+    　　m:function(){　　　　　　　　　　　//对象中的方法m
 
-　　　　var self=this;　　　　　　　　　//将this值保存在一个变量中
+    　　　　var self=this;　　　　　　　　　//将this值保存在一个变量中
 
-　　　　console.log(this===o);　　　　//输出true，this就是指对象o
+    　　　　console.log(this===o);　　　　//输出true，this就是指对象o
 
-　　　　f();　　　　　　　　　　　　　　
+    　　　　f();　　　　　　　　　　　　　　
 
-　　　　function f(){　　　　　　　　　//在方法m内部定义一个嵌套函数f
+    　　　　function f(){　　　　　　　　　//在方法m内部定义一个嵌套函数f
 
-　　　　　　console.log(this===o);　　//"false"：this的值是指向全局对象或者undefined
+    　　　　　　console.log(this===o);　　//"false"：this的值是指向全局对象或者undefined
 
-　　　　　　console.log(self===o);　　//"true"：self指向外部函数的this值
+    　　　　　　console.log(self===o);　　//"true"：self指向外部函数的this值
 
-　　　　}
+    　　　　}
 
-　　}
+    　　}
 
-};
+    };
 
 例子2：
 
-var name = "The Window";   
-　　var object = {   
-　　　　name : "My Object",   
-　　　　getNameFunc : function(){   
-　　　　　　return function(){   
-　　　　　　　　return this.name;   
-　　　　　};   
-　　　　}   
-};   
-alert(object.getNameFunc()());  //输出结果为：The Window
+    var name = "The Window";   
+    　　var object = {   
+    　　　　name : "My Object",   
+    　　　　getNameFunc : function(){   
+    　　　　　　return function(){   
+    　　　　　　　　return this.name;   
+    　　　　　};   
+    　　　　}   
+    };   
+    alert(object.getNameFunc()());  //输出结果为：The Window

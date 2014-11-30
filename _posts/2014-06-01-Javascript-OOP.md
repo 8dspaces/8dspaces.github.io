@@ -1,6 +1,7 @@
 ---
 layout: post
 category : blog
+title: "深入浅出理解JavaScript面向对象 "
 tagline: "深入浅出理解JavaScript面向对象 "
 tags : [blog, javascript]
 ---

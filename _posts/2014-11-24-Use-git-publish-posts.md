@@ -1,12 +1,11 @@
 ---
 layout: post
 category : blog
-tagline: ""
+title: 用Git发布文章
 tags : [git]
 ---
 {% include JB/setup %}
 
-## 用Git发布文章
 
 jekyll 搭建博客之后（基于github)，在本地写好文章  
 那么问题来了：怎么发布到github上呢？  

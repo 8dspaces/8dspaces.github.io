@@ -1,6 +1,7 @@
 ---
 layout: post
 category : blog
+title: "给JavaScript初学者的24条好建议 "
 tagline: "给JavaScript初学者的24条好建议 "
 tags : [blog, javascript]
 ---
