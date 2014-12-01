@@ -10,14 +10,14 @@
 
 
 + 测试总结（主要工作）
-+ 测试自动化的一些东西(selenium, robotfrawork，QTP)
++ 测试自动化的一些东西(`selenium`, `robotfrawork`，`QTP`)
 + 敏捷测试(关注点和方向）
     + 核心价值观： 简单，沟通，反馈，勇气
     + 实践： Scrum，持续集成，分层自动化测试 
 + Python（热爱的语言，有了它QA更强大）
-    + Web: flask/web.py/django, requests, beautifulsoup
-    + Test: Unittest
-    + 平常的一些工具类脚本： os,sys,re ...
+    + Web: `flask` / `web.py` / `django`, `requests`, `beautifulsoup`
+    + Test: `Unittest`
+    + 平常的一些工具类脚本： `os`,`sys`,`re`, ...
 + Javascript/Web前端技术(Bootstrap)
 + 其他...
     + Linux/Mac OS
