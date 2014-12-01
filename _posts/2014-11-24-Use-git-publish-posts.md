@@ -67,12 +67,12 @@ id_dsa 和 id_dsa.pub 就是需要的文件
         # 如已经clone过了，可以用pull拿到最新版本
         git pull
         
-        # 更改之后，简单点加更改到Header（提交）
+        # 更改之后，把改动的文件加进来（准备提交）
         git add .  (也可以 git add -A)
-        # 正规点为以后便于检索，打个label 
-        git commit <label name>
+        #  把更改提交到本地仓库，加 comment（未同步到远程仓库）
+        git commit -m “comment”
         
-        # 提交
+        # 更新到远程仓库
         git push
         
 当然这是最最简单的git操作，参考 [GIT操作小结](http://wklken.me/posts/2013/12/01/git-base.html)

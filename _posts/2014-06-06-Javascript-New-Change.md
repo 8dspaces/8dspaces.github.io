@@ -7,16 +7,13 @@ tags : [blog, javascript]
 
 关于javascript 面向对象的一些新变化
 
-
-
         /**
-         * Object descriptor
+        * Object descriptor
         **/
-         
+
         var a = {
-          prop1 : 14
+                prop1 : 14
         }
-         
         var descriptorObj1 = Object.getOwnPropertyDescriptor(a, 'prop1');
          
         // Property defined in 'regular' way has descriptor that looks like that
