@@ -2,7 +2,7 @@
 ##我的进步阶梯（博客）
 
 
-想尝试下jekyll搭建博客的过程，然后就有了这个博客，基于github|jekyll|bootstrap|markdown 这样的方式真的很方便。 
+想尝试下jekyll搭建博客的过程，然后就有了这个博客，基于**github | jekyll | bootstrap | markdown** 这样的方式真的很方便。 
 只是方便自己的学习总结和管理，难免有错误，从不断的总结中去学习和提高自己，所以算是我的进步阶梯  
 
 
@@ -18,7 +18,6 @@
     + Web: flask/web.py/django, requests, beautifulsoup
     + Test: Unittest
     + 平常的一些工具类脚本： os,sys,re ...
-    
 + Javascript/Web前端技术(Bootstrap)
 + 其他...
     + Linux/Mac OS
@@ -27,13 +26,11 @@
 
 
 
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br />
 
-#### 基于(和感谢) 
-[Jekyll-Bootstrap](http://jekyllbootstrap.com)
-主题[Mark Reid](http://mark.reid.name/)， 喜欢简洁的页面风格，自己做了一些修改
-
-
-
-#####Jekyll-Bootstrap Documentation Website.
-The documentation website at <http://jekyllbootstrap.com> is maintained at https://github.com/plusjade/jekyllbootstrap.com
+<hr / >
+**基于(和感谢)**   
++ [Jekyll-Bootstrap](http://jekyllbootstrap.com)
++ 主题[Mark Reid](http://mark.reid.name/)， 喜欢简洁的页面风格，自己做了一些修改  
++ [Jekyll-Bootstrap Documentation](https://github.com/plusjade/jekyllbootstrap.com) 
+ 
