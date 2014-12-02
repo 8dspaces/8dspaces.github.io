@@ -7,6 +7,7 @@ group: navigation
 {% include JB/setup %}
 
 <ul>
-{% assign pages_list = site.posts %}
-{% include JB/pages_list %}
+{% for post in site.posts %}
+<li>{{ post.date | date_to_string }} » {{ post.title }}</li>
+{% endfor %}
 </ul>
