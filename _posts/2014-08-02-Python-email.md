@@ -7,7 +7,6 @@ tags : [blog, python]
 
 
 
-# Python邮件相关（SMTP and email)
 
 在我们实际收发邮件时常常会涉及到一些邮件相关的协议，如SMTP，POP，IMAP
 简单理解SMTP是用来发邮件的， POP和IMAP是收邮件到本地
@@ -19,13 +18,12 @@ tags : [blog, python]
 
 如果你想把邮件download到本地，可以用outlook之类的软件绑定服务商提供的邮件服务器，来收发邮件。
 
-一些参考：  
-[什么是POP3、SMTP和IMAP?](http://help.163.com/09/1223/14/5R7P6CJ600753VB8.html)
+**一些参考**：[什么是POP3、SMTP和IMAP?](http://help.163.com/09/1223/14/5R7P6CJ600753VB8.html)
 
 在实际的测试中，自动化测试中当脚本检测到一些异常就可以发送邮件给对应的人或team, 所以在脚本中加一些发邮件的功能算是比较常见的需求
 发送邮件主要用到了smtplib和email两个模块。 stmplib 可以帮助实现发邮件的需求， 而具体邮件的内容会涉及到email模块中的相关功能
 
-### smtplib模块
+### **smtplib模块**
 
 **smtplib.SMTP([host[, port[, local_hostname[, timeout]]]])**
 
@@ -36,7 +34,7 @@ SMTP类构造函数，表示与SMTP服务器之间的连接，通过这个连接
 **Note**: smtplib模块还提供了SMTP_SSL类和LMTP类，对它们的操作与SMTP基本一致。
 
 
-####smtplib.SMTP提供的方法：
+**smtplib.SMTP提供的方法**：
 
 + SMTP.set_debuglevel(level)：设置是否为调试模式。默认为False，即非调试模式，表示不输出任何调试信息。
 + **SMTP.connect([host[, port]])**：连接到指定的smtp服务器。参数分别表示smpt主机和端口。注意: 也可以在host参数中指定端口号（如：smpt.yeah.net:25），这样就没必要给出port参数。
@@ -48,7 +46,7 @@ SMTP类构造函数，表示与SMTP服务器之间的连接，通过这个连接
 + **SMTP.sendmail(from_addr, to_addrs, msg[, mail_options, rcpt_options])** ：msg是字符串，表示邮件。我们知道邮件一般由标题，发信人，收件人，邮件内容，附件等构成，发送邮件的时候，要注意msg的格式。这个格式就是smtp协议中定义的格式。  ---> 具体meg可以通过email 模块去实现。
 + **SMTP.quit()** ：断开与smtp服务器的连接，相当于发送"quit"指令。（很多程序中都用到了smtp.close()，具体与quit的区别google了一下，也没找到答案。）
 
-### email模块
+**email模块**
 
 emial模块用来处理邮件消息,使用这些模块来定义邮件的内容，是非常简单的。其包括的类有（更加详细的介绍可见[官方文档](http://docs.python.org/library/email.mime.html)）
 
@@ -215,8 +213,8 @@ MIMEText对象，其中_text是邮件内容，_subtype邮件类型，可以是te
         server.sendmail(msg['From'],msg['To'],msg.as_string())
         server.quit()
         
-    if __name__ == "__main__":
-        AutoSendMail()
+        if __name__ == "__main__":
+            AutoSendMail()
 
 ## 总结
 

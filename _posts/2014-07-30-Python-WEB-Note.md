@@ -5,17 +5,10 @@ title: "Python WEB术语总结"
 tags : [blog, python]
 ---
 
-
-<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-<link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/github.min.css">
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
-
-# 一些术语的总结
+**Python一些Web术语的总结**
 
 
-+ ##Apache/lighttpd  
++ `Apache/lighttpd`
 
    相当于一个**request proxy**，根据配置，**把不同的请求转发给不同的server处理**，例如
   + **静态的文件**请求自己处理，这个时候它就像一个web server，
@@ -23,7 +16,7 @@ tags : [blog, python]
 
     >Apache/Lighttpd:  HTTP Server(Web服务器),如同原文所说 HTTP Server其实相当于一个 request proxy(请求代理),它们负责解析 HTTP 协议，因为你不能在自己的程序中先 解析HTTP 协议，然后在进行响应的处理。这样的话 第一增加了程序员的工作难度(HTTP解析还真有点负责) 第二：程序会变的复杂，不易修改。所以我们就把解析HTTP协议这个工作交给一种专门的软件来做----HTTP Server。HTTP协议的解析的工作完成了，协议被解析成各种请求，那谁来处理这些请求来？当请求是一个静态文件(HTML文件)的时候，HTTP Server则会自己处理这些请求，此时HTTP Server 就相当于一个Web Server。但当我们请求的是一个 cgi/fastcgi/python 脚本的时候呢？很明显HTTP Server就处理不了啦，因为这些脚本无法直接转换为HTML文本，要依赖于某种特定的容器(环境)下才可以，对于 cgi/fastcgi/python 这样的请求转发给flup这样的Server/Gateway进行处理。就比如我们在Java Web中要请求一个Servlet时,普通的HTTP Server肯定处理不了，Servelt只能运行在实现了Servelt规范的服务器上才可以。
 
-+ ##flup (one WSGI Server)
++ `flup (one WSGI Server)`
 
     一个用python写的web server，也就是cgi中所谓的Server/Gateway，它负责接受 `apache/lighttpd转发的请求`，并`调用你写的程序 (application)`，并将application处理的`结果返回到apache/lighttpd`
 
@@ -32,14 +25,14 @@ tags : [blog, python]
     + Werkzeug: Flask使用的
     
     
-+ ##CGI (Common Gateway Interface)  
++ `CGI (Common Gateway Interface)`
     
     一种替代用户直接访问服务器上文件而诞生的“代理”， 用户通过CGI弧度动态数据和文件  
     CGI是一种为用户动态提供所需数据的设计思想，它有很多各种不同语言的实现
     
     web服务器负责接收http请求，但是http请求从request到response的过程需要有应用程序的逻辑处理，web服务器一般是使用C写的，比如nginx，apache。而应用程序则是由各种语言编写，比如php，java，python等。这两种语言要进行交互就需要有个协议进行规定，而cgi就是这么个网关协议。
     
-+ ##fastCGI 
++ `fastCGI`
 
     apache/lighttpd的一个模块
 
@@ -48,13 +41,13 @@ tags : [blog, python]
     虽然flup可以作为一个独立的web server使用，但是`对于浏览器请求处理一般都交给 apache/lighttpd处理`，然后由apache/lighttpd`转发给flup处理`，这样就需要`一个东西来把apache/lighttpd跟flup联系起来`，这个东西就是**fastcgi**，它通过**环境变量以及socket**将客户端请求的信息传送给flup并接收flup返回的结果 -->做相关的配置
 
 
-+ ##Web framework(web.py/django)
++ `Web framework(web.py/django)`
 
     有了上面的东西你就可以开始编写你的web程序了，但是问题是你就要自己处理浏览器的输入输出，还有cookie、session、模板等各种各样的问题了，web.py的作用就是帮你把这些工作都做好了，它就是所谓的web framework
 
 
 
-+ ##WSGI（Web Server Gateway Interface）
++ `WSGI（Web Server Gateway Interface）`
 
     WSGI是Python对CGI进行的一种包装，核心使用Python实现，具体实现通常来说也需要使用Python    
     拿nginx+fastcgi+php为例子，nginx里面的fastcgi模块实现cgi的客户端，php的cgi-sapi实现cgi的服务端。
@@ -72,11 +65,11 @@ tags : [blog, python]
         server(app).serve_forever()
         
         
-##更多的参考：
+**更多的参考：**
 
 + [WSGI org document](http://wsgi.readthedocs.org/en/latest/)
 
-+ ####一篇关于WSGI，CGI的回答列在这里： 
++ 一篇关于WSGI，CGI的回答列在这里： 
  
 **How WSGI, CGI, and the frameworks are all connected ?**
 
@@ -98,28 +91,21 @@ What do I need to know / install / do if I want to run a web framework (say web.
 Recall that forking a subprocess is expensive. There are two ways to work around this.
 
 + Embedded `mod_wsgi` or `mod_python` embeds Python inside Apache; no process is forked. Apache runs the Django application directly.
-
 + Daemon `mod_wsgi` or `mod_fastcgi` allows Apache to interact with a separate daemon (or "long-running process"), using the WSGI protocol. You start your long-running Django process, then you configure Apache's mod_fastcgi to communicate with this process.
 
 Note that mod_wsgi can work in either mode: embedded or daemon.
-
-When you read up on `mod_fastcgi`, you'll see that `Django` uses `flup` to create a WSGI-compatible interface from the information provided by mod_fastcgi. The pipeline works like this.
+When you read up on `mod_fastcgi`, you'll see that `Django` uses `flup` to create a WSGI-compatible interface from the information provided by mod_fastcgi. The pipeline works like this.  
 
 `Apache -> mod_fastcgi -> FLUP (via CGI protocol) -> Django (via WSGI protocol)`
 
 Django has several "django.core.handlers" for the various interfaces.
 
 + For `mod_fastcgi`, Django provides a manage.py runfcgi that integrates FLUP and the handler.
-
 + For `mod_wsgi,` there's a core handler for this.
 
-How to install WSGI support ?
-
-Follow these instructions.
-
+How to install WSGI support ?Follow these instructions.  
 [IntegrationWithDjango](http://code.google.com/p/modwsgi/wiki/IntegrationWithDjango)
 
-For background see this
-
+For background see this  
 [Backgroud ](http://docs.djangoproject.com/en/dev/howto/)
     
