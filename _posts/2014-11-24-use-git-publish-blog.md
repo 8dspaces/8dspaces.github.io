@@ -4,7 +4,7 @@ category : blog
 title: 用Git发布文章
 tags : [git]
 ---
-{% include JB/setup %}
+
 
 
 jekyll 搭建博客之后（基于github)，在本地写好文章  

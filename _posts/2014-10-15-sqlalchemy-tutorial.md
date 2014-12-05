@@ -6,12 +6,6 @@ tags : [blog, python,sqlalchemy]
 ---
 
 
-<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-<link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/github.min.css">
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
-##sqlalchemy学习教程[转]  
 
 1. slqalchemy的版本  
 

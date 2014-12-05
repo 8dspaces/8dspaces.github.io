@@ -4,9 +4,7 @@ category : blog
 title: "[转]Writing a class decorator in Python"
 tags : [blog, python]
 ---
-
-
-#Writing a class decorator in Python[转]  
+ 
 
 
 Hi there, currently I’m working in a project which will be basically to provide a RESTful API to be consumed by a third party application.
@@ -50,11 +48,11 @@ So, let’s start with the classic method decorator where you have to decorate e
 If you run this code you will get something like:
 
 [apalma@insys tests] python method_decorator.py 
-::: With decorated methods :::
-	Inside the decorator
-		this is a the MyFirstClass.first_method
-	Inside the decorator
-		this is the MyFirstClass.second_method
+    With decorated methods
+    Inside the decorator
+        this is a the MyFirstClass.first_method
+    Inside the decorator
+        this is the MyFirstClass.second_method
 Obviously, following this approach you will have to go through all the available methods and decorate the ones you want to change its default behaviour.
 
 The other solution its to write a class decorator, where you select which methods to decorate passing their names as the decorator arguments.
@@ -106,9 +104,10 @@ Run the code, and the result that comes out is the following:
 
     [apalma@insys tests] python class_decorator.py 
     ::: With a decorated class :::
-    	Inside the decorator
-    		this is a the MySecondClass.first_method
-    	Inside the decorator
-    		this is the MySecondClass.second_method
+        Inside the decorator
+            this is a the MySecondClass.first_method
+        Inside the decorator
+            this is the MySecondClass.second_method
+            
 As you can see the output and the program flow when calling the class methods was similar in both situations.
 

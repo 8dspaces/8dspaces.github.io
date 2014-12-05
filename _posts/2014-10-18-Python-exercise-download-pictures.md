@@ -9,7 +9,7 @@ tags : [blog,python]
 用python批量下载图片 -- Simple example
 ====
 
-### 方法一: urllib
+## 方法一: urllib
 
 主要用到了自带的urllib 模块
 
@@ -17,7 +17,7 @@ tags : [blog,python]
 + **urllib.urlretrieve(url)**
 
 
-#### Python Code: 
+## Python Code: 
 
     import re
     import urllib
@@ -40,7 +40,7 @@ tags : [blog,python]
     html=getHtml("http://www.douban.com")
     print getJpg(html)
 
-### 方法二：requests库
+## 方法二：requests库
 
 安装： `pip install requests`
 用到的方法
@@ -48,7 +48,7 @@ tags : [blog,python]
 + **requests.get(url)**
 
 
-####Python Code:
+##Python Code:
 
     def downloadImageFile(imgUrl):
         
