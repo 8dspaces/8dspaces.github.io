@@ -1,14 +1,16 @@
 
 <div id="page">
 <div class="page-content">
-  <h1 class="emphnext"><strong>{{ page.title }}</strong></h1><hr />
+  <h1 class="emphnext"><strong>{{ page.title }}</strong></h1>
+
+
+<br />
+  {{ content }}
+<hr />
   <ul class="tag_box inline">
   {% assign tags_list = page.tags %}
   {% include JB/tags_list %}
   </ul>
-
-<br />
-  {{ content }}
 
   <address class="signature">
     <a class="author" href="{{ HOME_PATH }}">{{ site.author.name }}</a> 

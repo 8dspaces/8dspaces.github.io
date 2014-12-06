@@ -22,7 +22,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,th,t
 
 body {
 	/*font-family: Palatino, georgia, "times new roman", serif;*/
-    font-family:Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+    font-family:'Hiragino Sans GB',Helvetica,'Microsoft Yahei', '微软雅黑', Arial, ;
 	background-color: #dfdfdf; /*whitesmoke;*/
 	background-position: center -18em;
 	background-repeat: repeat-x; 
@@ -33,7 +33,7 @@ img { -ms-interpolation-mode:bicubic; }
 
 /* IE6 ignores this and uses default size of 16pt */
 html>body { font-size:15px; }
-p { margin: 0 0 1.5em 0; text-align: justify; }
+p { margin: 0 0 1.5em 1em; text-align: justify; }
 
 a { text-decoration: none; color: #339; }
 a:hover { text-decoration: underline; color: #33f; }
@@ -41,26 +41,44 @@ a.pdf:before {
 	margin-right: 1em;
 	content: url(/files/css/icon_pdf.gif); }
 
-h1,h2,h3,h4 { 
+h1{ 
 	line-height:1em; 
 	font-size:1.5em; 
 	font-weight: normal; 
 	clear: left; 	
 	font-family: 'lucida grande', sans-serif; 
 }
-h1 { margin-bottom: 1em; }
+h1 { margin-bottom: 0em;  }
+
 h2 ,h3{
 	font-size: 100%;
-	line-height: 1.5em;
-	margin:1.5em 0 1.5em 0;
-	font-weight:bold;
+    line-height:1em; 
+    font-size:1.3em;
 }
 
 hr { 
-	border-top: 1px solid silver;
+	border-top: 1px solid rgba(125, 117, 117, 1);
 	border-bottom: none;
 	padding: 0;
-	margin: 1.46em 0 0 0;
+	margin: 5px 0 0 0;
+}
+/*
+h2 > hr, h3 >hr{
+	border-top: 1px solid green;
+	border-bottom: none;
+	padding: 0;
+	margin: 5px 0 0 0;
+}
+*/
+
+.page-content h2, .page-content h3{
+    //color: #080;
+    margin: 40px 0px 10px;
+    //border-left: thick solid #008000;
+    padding: 10px 0px 10px 0px;
+    //background-color: #F8F8F8;
+    font-family: "Microsoft YaHei",Verdana,"BitStream vera Sans";
+    font-weight: bold;
 }
 
 sup { line-height: 1ex; }
@@ -111,12 +129,26 @@ sup { line-height: 1ex; }
 	counter-increment: section 2;
 }
 */
-
+/*
 .emphnext{
-    font-size: 24px;
+    font-size: 26px;
     color: green;
     font-weight:bold;
+    margin-bottom: 0px;
+}*/
+
+.page-content h1 {
+    display: block;
+    margin-top: 10px;
+    border-width: 1px;
+    //border-style: solid;
+    //border-color: #FFF #CCC #CCC #FFF;
+    padding: 8px;
+    font-size: 30px;
+    font-family: "Microsoft YaHei",Verdana,"BitStream vera Sans";
+    //background: none repeat scroll 0% 0% #EEE;
 }
+
 
 /* @group FancyFirst */
 .emphnext + p:first-letter, p.emphfirst:first-letter {
@@ -385,7 +417,7 @@ p.excerpt { margin: 0; }
 /* @group Code */
 
 pre {
-	margin: 1em 0 1.5em 0; 
+	margin: 1em 0 1.5em 1em; 
     border: 1px solid #ddc;
 	padding: 0.5em 1em;
    }
@@ -572,7 +604,7 @@ img.maruku-png { }
 .tag_box {
 	list-style:none;
 	margin:0;
-	padding:5px 0 ;
+	padding:0px 0 ;
 	overflow:hidden;
 }
 .tag_box li {
