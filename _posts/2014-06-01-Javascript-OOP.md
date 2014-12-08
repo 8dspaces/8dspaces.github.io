@@ -7,7 +7,6 @@ tags : [blog, javascript]
 ---
 
 忘记原文链接了
-## 深入浅出理解JavaScript面向对象
 
 JavaScript 是面向对象的。但是不少人对这一点理解得并不全面。
 

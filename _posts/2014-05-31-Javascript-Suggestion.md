@@ -9,7 +9,6 @@ tags : [blog, javascript]
 [原文链接](http://code.tutsplus.com/tutorials/24-javascript-best-practices-for-beginners--net-5399)
 [翻译链接](http://7log.net/archives/javascript/24_JavaScript_Best_Practices_for_Beginners/)
 
-## 给JavaScript初学者的24条好建议
 
 1.使用 === 代替 ==
 

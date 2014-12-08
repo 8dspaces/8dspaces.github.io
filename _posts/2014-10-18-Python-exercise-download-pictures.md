@@ -6,9 +6,6 @@ tags : [blog,python]
 ---
 
 
-用python批量下载图片 -- Simple example
-====
-
 ## 方法一: urllib
 
 主要用到了自带的urllib 模块

@@ -5,13 +5,6 @@ title: "Decorator pattern in classic way"
 tags : [blog]
 ---
 
-<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-<link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/github.min.css">
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
-#Decorator pattern in classic way    
-    
     
     1:  class Beverage:  
 	2:    """ beverage class """  

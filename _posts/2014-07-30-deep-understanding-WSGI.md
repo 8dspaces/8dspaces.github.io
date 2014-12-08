@@ -5,9 +5,7 @@ title: "[转]深入理解WSGI"
 tags : [blog, python,wsgi]
 ---
 
-##深入理解WSGI
-
-转自：[Here](https://github.com/lzjun567/note/blob/master/note/python/wsgi.md)
+转自：[这里](https://github.com/lzjun567/note/blob/master/note/python/wsgi.md)
 
 
 WSGI是什么?是一种规范,用来规范Python web应用与服务器之间通信的标准.好比你和老外说话也需要建立一种事先制定的语言来沟通一样.如果今天你碰一德国人,然后你就去学德语,如果碰到日本人,然后去学日语,这样累死了,干脆定一种标准,大家都说英语好了.全世界通用.同样的道理,在python语言中,web框架多如牛毛,这么多框架如果大家都不遵守规则,然后写服务器也没啥规范,这个世界就乱套了.因此python2.5就提出了WSGI, PEP3333.

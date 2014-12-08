@@ -4,9 +4,7 @@ category : blog
 title: "关于bootstrap的一些总结"
 tags : [blog, bootstrap]
 ---
-
-
-##  关于BootStrap的一些总结   
+  
 
 `Bootstrap `是Twitter发布的一套优秀的前端框架，提供了快速构建前端页面的方式，实用优雅
 大量现成的css, javascript控件可控选择 （BS JS 基于jQuery, 结合JQuery的控件，更加强大）

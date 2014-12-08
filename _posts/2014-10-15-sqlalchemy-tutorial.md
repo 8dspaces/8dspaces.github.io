@@ -5,14 +5,14 @@ title: "[转]sqlalchemy学习教程"
 tags : [blog, python,sqlalchemy]
 ---
 
+##基础
 
-
-1. slqalchemy的版本  
++ slqalchemy的版本  
 
         import sqlalchemy
         slqalchemy.__version__
 
-2. 创建连接  
++ 创建连接  
 
         :::python
         #数据库设置
@@ -33,12 +33,12 @@ tags : [blog, python,sqlalchemy]
         #如果是连接sqlite
         #engine = create_engine('sqlite:///:memory:', echo=True)
         
-3. 声明基类  
++ 声明基类  
 
         from sqlalchemy.ext.declarative import declarative_base
         Base = declarative_base()
         
-4. 定义表
++ 定义表
 
         from sqlalchemy import Column, Integer, String
         class User(Base):
@@ -60,12 +60,12 @@ tags : [blog, python,sqlalchemy]
                 
     如果不写__init__,将会有一个默认的构造函数
 
-5. 创建会话
++ 创建会话
 
         from sqlalchemy.orm import sessionmaker
         Session = sessionmaker(bind=engine)
         
-6. 常用操作
++ 常用操作
 
     绑定session后就可以进行一系列操作了哦
 
@@ -79,32 +79,32 @@ tags : [blog, python,sqlalchemy]
     
 ##查询语句 
 
-1. 第一种
++ 第一种
 
         for instance in session.query(User).order_by(User.id):
             print instance.name, instance.fullname
 
-2. 第二种
++ 第二种
 
         for name, fullname in session.query(User.name, User.fullname):
             print name, fullname
 
-3. 第三种 
++ 第三种 
 
         for row in session.query(User, User.name).all(): 
             print row.User, row.name
 
-4. 第四种 切片的哦
++ 第四种 切片的哦
 
         for u in session.query(User).order_by(User.id)[1:3]: 
             print u
 
-5. 第五种 用filter()匹配的
++ 第五种 用filter()匹配的
 
         for name, in session.query(User.name).filter_by(fullname='Ed Jones'): 
             print name
 
-6. 第六种 两次filter()  
++ 第六种 两次filter()  
 
         for user in session.query(User).filter(User.name=='ed').filter(User.fullname=='Ed Jones'): 
             print user

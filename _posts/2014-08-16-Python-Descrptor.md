@@ -5,13 +5,6 @@ title: "关于描述符"
 tags : [blog, python]
 ---
 
-<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-<link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/github.min.css">
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
-
-## 关于描述符
 
 描述符
   

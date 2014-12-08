@@ -6,13 +6,6 @@ tags : [blog, python,wsgi,webpy]
 ---
 
 
-<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-<link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/github.min.css">
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
-
-# WSGI 理解
 
 主要参考[Kenshin博客](http://blog.kenshinx.me/blog/wsgi-research/)
 

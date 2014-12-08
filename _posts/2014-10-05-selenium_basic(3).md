@@ -1,31 +1,24 @@
 ---
 layout: post
 category : blog
-title: "selenium 基础(三)"
+title: "selenium 基础(三)--操作"
 tags : [blog, python,selenium]
 ---
 
-<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
-<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
-<script>hljs.tabReplace = ' ';hljs.initHighlightingOnLoad();</script>
-
-
-Selenium_Basic(2)--操作
-===
 
 识别控件之后下一步就是操作控件
 selenium支持哪些操作呢
 
 ### send_keys (文本框操作）
 
-    `element.send_keys("some text")`
+    element.send_keys("some text")
 
 可以同时支持其他按键
 
-    `element.send_keys(" and some", Keys.ARROW_DOWN)`
+    element.send_keys(" and some", Keys.ARROW_DOWN)
 
 也可以清除文本框中内容
-    `element.clear()`
+    element.clear()
 
 ### 表单操作
 
@@ -91,17 +84,17 @@ selenium有更方便的方式提交表单
     
 frame 之间移动
 
-    `driver.switch_to_frame("frameName")`
+    driver.switch_to_frame("frameName")
     
 It’s possible to access subframes by separating the path with a dot, and you can specify the frame by its index too. That is:
 
-    `driver.switch_to_frame("frameName.0.child")`
+    driver.switch_to_frame("frameName.0.child")
     
 would go to the frame named “child” of the first subframe of the frame called “frameName”. All frames are evaluated as if from *top*.
 
 Once we are done with working on frames, we will have to come back to the parent frame which can be done using:
 
-    `driver.switch_to_default_content()`
+    driver.switch_to_default_content()
 
 ### 弹出窗口
 

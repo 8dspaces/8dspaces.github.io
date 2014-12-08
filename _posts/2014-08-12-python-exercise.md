@@ -6,12 +6,7 @@ tags : [blog, python]
 ---
 
 
-
-
-### Python Exercise
-
-
-#### Ex1_Walk
+### Ex1_Walk
 
 
 	import os

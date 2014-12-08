@@ -6,14 +6,6 @@ tags : [blog, python]
 ---
 
 
-<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-<link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/github.min.css">
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
-
-# Python challenge 
-
 
 +  http://www.pythonchallenge.com/pc/def/0.html 
    2^38 to change url   

@@ -1,18 +1,11 @@
 ---
 layout: post
 category : blog
-title: "selenium 基础(四)"
+title: "selenium 基础(四)--学会等待"
 tags : [blog, python,selenium]
 ---
 
 
-<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
-<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
-<script>hljs.tabReplace = ' ';hljs.initHighlightingOnLoad();</script>
-
-
-Selenium_Basic(3)--学会等待
-=====
 
 在运行测试用例时，等待控件加载完毕，等待上一个step结束然后运行下一步骤是非常常见的需求
 用slenium 可以支持什么样的方式去实现呢？

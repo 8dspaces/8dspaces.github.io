@@ -6,8 +6,6 @@ tags : [blog, python,selenium]
 ---
 
 
-## Selenium_Basic(0)--Start
-
 ### Simple Usage
 
     If you have installed Selenium Python bindings, you can start using it from Python like this.
@@ -34,19 +32,19 @@ Currently supported WebDriver implementations are Firefox, Chrome, Ie and Remote
 
     from selenium import webdriver
     from selenium.webdriver.common.keys import Keys
-    Next, the instance of Firefox WebDriver is created.
+    # Next, the instance of Firefox WebDriver is created.
 
     driver = webdriver.Firefox()
-    The driver.get method will navigate to a page given by the URL. WebDriver will wait until the page has fully loaded (that is, the “onload” event has fired) before returning control to your test or script. It’s worth noting that if your page uses a lot of AJAX on load then WebDriver may not know when it has completely loaded.:
+    # The driver.get method will navigate to a page given by the URL. WebDriver will wait until the page has fully loaded (that is, the “onload” event has fired) before returning control to your test or script. It’s worth noting that if your page uses a lot of AJAX on load then WebDriver may not know when it has completely loaded.:
 
     driver.get("http://www.python.org")
-    The next line is an assertion to confirm that title has “Python” word in it:
+    # The next line is an assertion to confirm that title has “Python” word in it:
 
     assert "Python" in driver.title
-    WebDriver offers a number of ways to find elements using one of the find_element_by_* methods. For example, the input text element can be located by its name attribute using find_element_by_name method. Detailed explanation of finding elements is available in the Locating Elements chapter:
+    # WebDriver offers a number of ways to find elements using one of the find_element_by_* methods. For example, the input text element can be located by its name attribute using find_element_by_name method. Detailed explanation of finding elements is available in the Locating Elements chapter:
 
     elem = driver.find_element_by_name("q")
-    Next we are sending keys, this is similar to entering keys using your keyboard. Special keys can be send using Keys class imported from selenium.webdriver.common.keys:
+    # Next we are sending keys, this is similar to entering keys using your keyboard. Special keys can be send using Keys class imported from selenium.webdriver.common.keys:
 
     elem.send_keys("selenium")
     elem.send_keys(Keys.RETURN)
@@ -104,7 +102,7 @@ The unittest module is a built-in Python based on Java’s JUnit.
 This module provides the framework for organizing the test cases. 
 The selenium.webdriver module provides all the WebDriver implementations. 
 Currently supported WebDriver implementations are Firefox, Chrome, Ie and Remote.
- The Keys class provide keys in the keyboard like RETURN, F1, ALT etc.
+The Keys class provide keys in the keyboard like RETURN, F1, ALT etc.
 
     import unittest
     from selenium import webdriver
