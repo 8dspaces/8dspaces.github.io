@@ -65,7 +65,6 @@ MIMEText对象，其中_text是邮件内容，_subtype邮件类型，可以是te
     # -*- coding: UTF-8 -*-
     '''
     发送txt文本邮件
-    小五义：http://www.cnblogs.com/xiaowuyi
     '''
     import smtplib  
     from email.mime.text import MIMEText  
@@ -104,7 +103,6 @@ MIMEText对象，其中_text是邮件内容，_subtype邮件类型，可以是te
     # -*- coding: utf-8 -*-
     '''
     发送html文本邮件
-    小五义：http://www.cnblogs.com/xiaowuyi
     '''
     import smtplib  
     from email.mime.text import MIMEText  
@@ -131,7 +129,7 @@ MIMEText对象，其中_text是邮件内容，_subtype邮件类型，可以是te
             print str(e)  
             return False  
     if __name__ == '__main__':  
-        if send_mail(mailto_list,"hello","<a href='http://www.cnblogs.com/xiaowuyi'>小五义</a>"):  
+        if send_mail(mailto_list,"hello","This is message"):  
             print "发送成功"  
         else:  
             print "发送失败"  
@@ -143,7 +141,6 @@ MIMEText对象，其中_text是邮件内容，_subtype邮件类型，可以是te
     # -*- coding: utf-8 -*-
     '''
     发送带附件邮件
-    小五义：http://www.cnblogs.com/xiaowuyi
     '''
 
     from email.mime.text import MIMEText
