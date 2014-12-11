@@ -6,9 +6,6 @@ tags : [blog, python]
 ---
 
 
-#清晰理解wsgi
-
-
 wsgi是一套**规范**，用来标准化Web Server和Web framework/app之间的接口。它不是server不是framework也不是middleware，只是`一套用来标准化接口的规范`。
 
 由于目前主流的Python Web frameworks都支持wsgi, 因此一般情况下只需要知道如何配置就可以了，无需了解它的具体细节。
