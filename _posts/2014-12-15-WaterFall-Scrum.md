@@ -2,7 +2,7 @@
 layout: post
 category : blog
 title: "[转]企业Web应用中的敏捷测试和瀑布测试"
-tags : [blog, 测试,Agile]
+tags : [blog, test,Agile]
 ---
 
 看《软件开发沉思录：ThoughtWorks文集》时看到的一篇好文章，感觉特别适合经历过瀑布模型和敏捷流程的人看
