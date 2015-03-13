@@ -28,6 +28,12 @@ Selenium 遇到的问题
         # it's web element object, need use x.text to get the text 
         options = drop_list.options
         
+对于支持多选的选择列表，可以调用`select_by_x`多次来实现  
+
+        lists.select_by_value("549")
+        lists.select_by_value("548")
+        lists.select_by_value("547") 
+        
 2.  等待Ajax控件  
 
 在测试Ajax控件的时候经常需要等控件加载完毕才能获取和操作
