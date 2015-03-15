@@ -5,9 +5,10 @@ title: "体验python的argparse"
 tags : [test, selenium, python]
 ---
 
-参考：　
-+ [Convert CSV to XML « Python recipes « ActiveState Code](http://code.activestate.com/recipes/577423-convert-csv-to-xml/)
-+ [Python 命令行解析工具 Argparse介绍（一） - 理想空间 - 博客园](http://www.cnblogs.com/jianboqi/archive/2013/01/10/2854726.html)
+参考：  　
+
++ [Convert CSV to XML « Python recipes « ActiveState Code](http://code.activestate.com/recipes/577423-convert-csv-to-xml/)  
++ [Python 命令行解析工具 Argparse介绍（一） - 理想空间 - 博客园](http://www.cnblogs.com/jianboqi/archive/2013/01/10/2854726.html)  
 
 
 最近要用python把csv文件转成xml 格式，后期可能会加一些其他选项，所以趁这机会就想体验一下python的命令行解析模块　argparse   
