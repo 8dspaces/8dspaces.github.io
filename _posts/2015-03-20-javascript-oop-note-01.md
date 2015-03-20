@@ -150,6 +150,34 @@ tags : [javascript]
 })();
 ```
 
+改成封装型的 
+
+```
+(function(){
+    var Person = {
+        init: function(option){
+            if(typeof option == "undefined"){
+                option = {};
+            }
+            this.sName = option.sName || "Mick";
+            this.nAge = option.nAge || 25;
+            this.nWeight = option.nWeight || 68; 
+        
+        },
+        showInfo: function(){
+            return this.sName + " " + this.nAge + " " + this.nWeight;
+        }
+    
+    }
+    Person.init({
+        sName: "Micky",
+        nAge: 28
+    });
+    alert(Person.showInfo());
+
+})();
+```
+
 这里使用第三种面向对象写法，有兴趣的朋友可以自行尝试改成封装型写法。上面的改写看出哪里改动最大吗？对的，传入参数改成了一个对象字面量，而且传入参数可以是随意设置，位置颠倒也不会有任何问题。这里充分利用对象字面量优点，利用键值对代替原始的传参方式大大提升了可读性和容错性。还有一个改进就是默认值的处理，如果没有传入任何参数，此代码也能很好的运行下去，不会有任何问题。
 
 
