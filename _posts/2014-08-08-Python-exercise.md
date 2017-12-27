@@ -37,8 +37,10 @@ tags : [blog, python]
 
 
 
-+ **利用迭代得到斐波那契数列第n项**  
++ **利用迭代得到斐波那契数列第n项** 
+
 递归往往是可以转化为迭代的，这样免去了缓存的麻烦。当然不是所有递归都能很容易转为迭代
+
 
     def diedai_fab(n):
         x, y = 1, 1
@@ -48,8 +50,10 @@ tags : [blog, python]
         return x
     print diedai_fab(30)
 
-+ **迭代器itertools**    
++ **迭代器itertools** 
+
 生成器绝对是一个强大的工具，利用Python自带的迭代器库可以实现许多常见的功能。 
+
 
     def fab_3():
         x, y = 1, 1
